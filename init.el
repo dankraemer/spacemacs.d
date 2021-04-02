@@ -396,7 +396,8 @@ It should only modify the values of Spacemacs settings."
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
 
-   dotspacemacs-themes '(doom-gruvbox-light
+   dotspacemacs-themes '(doom-gruvbox
+                         doom-gruvbox-light
                          doom-solarized-light
                          doom-sourcerer
                          kaolin-valley-dark
@@ -411,7 +412,7 @@ It should only modify the values of Spacemacs settings."
    ;; refer to the DOCUMENTATION.org for more info on how to create your own
    ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(doom)
+   dotspacemacs-mode-line-theme '(spacemacs :separator wave :separator-scale 1.5)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
@@ -420,8 +421,8 @@ It should only modify the values of Spacemacs settings."
    ;; Default font or prioritized list of fonts. The `:size' can be specified as
    ;; a non-negative integer (pixel size), or a floating-point (point size).
    ;; Point size is recommended, because it's device independent. (default 10.0)
-   dotspacemacs-default-font '("Fira Code"
-                               :size 12.0
+   dotspacemacs-default-font '("Ubuntu Mono"
+                               :size 16.0
                                :weight normal
                                :width normal)
 
@@ -837,6 +838,11 @@ before packages are loaded."
     (when (featurep 'tab-bar)
       (define-key evil-normal-state-map "gt" nil)
       (define-key evil-normal-state-map "gT" nil)))
+
+  (setq projectile-globally-ignored-files (append '("sqlite.*")))
+
+  ;; Remap ESC to jk
+  (setq-default evil-escape-key-sequence "jk")
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

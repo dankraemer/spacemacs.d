@@ -182,9 +182,12 @@ This function should only modify configuration layer settings."
 
      ;; SPC ' runs shell in a popup buffer
      (shell :variables
-            shell-default-shell 'eshell
-            shell-default-height 30
+            shell-default-shell 'multi-term
+            shell-default-height 40
             shell-default-position 'bottom)
+
+     ;; Shell scripts layer
+     shell-scripts
 
      ;; spacemacs-layouts layer added to set variables
      ;; SPC TAB restricted to current layout buffers

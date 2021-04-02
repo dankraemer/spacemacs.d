@@ -171,6 +171,8 @@ This function should only modify configuration layer settings."
           org-journal-time-format ""
           org-journal-carryover-items "TODO=\"TODO\"|TODO=\"DOING\"|TODO=\"BLOCKED\"|TODO=\"REVIEW\"")
 
+     (osx :variables
+          osx-option-as 'meta)
 
      ;; Text-based file manager with preview - SPC a t r r
      (ranger :variables
@@ -660,7 +662,7 @@ It should only modify the values of Spacemacs settings."
    dotspacemacs-icon-title-format nil
 
    ;; Show trailing whitespace (default t)
-   dotspacemacs-show-trailing-whitespace nil
+   dotspacemacs-show-trailing-whitespace t
 
    ;; Delete whitespace while saving buffer. Possible values are `all'
    ;; to aggressively delete empty line and long sequences of whitespace,
@@ -940,6 +942,13 @@ before packages are loaded."
   ;; end of version control configuration
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Dockerfile configuration
+  ;;
+  ;; Add "*.tpl" files to open in dockerfile-mode
+  (add-to-list 'auto-mode-alist '("\\.tpl$" . dockerfile-mode))
+  ;; End of Dockerfile configuration
+  ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Org-mode configuration

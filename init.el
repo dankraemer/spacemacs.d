@@ -80,6 +80,9 @@ This function should only modify configuration layer settings."
      ;; https://develop.spacemacs.org/layers/+lang/csv/README.html
      csv
 
+     ;; Support for Docker files syntax highlighting
+     docker
+
      ;; For Spacemacs configuration files and packages
      emacs-lisp
 
@@ -109,6 +112,9 @@ This function should only modify configuration layer settings."
      html
      javascript
      json
+
+     ;; Support for Kubernetes
+     kubernetes
 
      ;; Language server protocol with minimal visual impact
      ;; https://practicalli.github.io/spacemacs/install-spacemacs/clojure-lsp/lsp-variables-reference.html
